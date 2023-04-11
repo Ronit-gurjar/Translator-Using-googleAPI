@@ -37,10 +37,10 @@ original_combo.grid(row=1, column=0)
 #Combo box2
 translated_combo=ttk.Combobox(root, width=50, value=language_list)
 translated_combo.current(21)
-translated_combo.grid(row=1, column=0)
+translated_combo.grid(row=1, column=2)
 
 #clear button
 clear_button = Button(root, text="CLEAR", command=clear)
-clear_button.grid(row=2,column=1)
+clear_button.grid(row=1,column=2)
 
 root.mainloop()
