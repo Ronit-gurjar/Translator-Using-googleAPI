@@ -11,7 +11,29 @@ root.geometry("770x300")
 
 #functions
 def translate_it():
-    pass
+    #clear any previous translations
+    translated_text.delete(1.0,END)
+    try:
+        #Get the languages from the Dictionary Keys
+        #FROM language key
+        for key,value in languages.items():
+            if(value==original_combo.get()):
+                from_language_key = key
+        #TO language key
+        for key,value in languages.items():
+            if(value==translated_combo.get()):
+                to_language_key = key
+                
+        #turn original text into a textblob       
+        words = textblob.TextBlob(original_text.get(1.0,END))
+        #translate text
+        words = words.translate(from_lang=from_language_key, to=to_language_key)
+        
+        #output translated text to screen
+        translated_text.insert(1.0,words)
+        
+    except Exception as e:
+        messagebox.showerror("Translator",e)
 def clear():
     original_text.delete(1.0,END)
     translated_text.delete(1.0,END)
