@@ -7,7 +7,11 @@ from tkinter import ttk, messagebox
 #app:-
 root = Tk()
 root.title("Language translator")
-root.geometry("880x300")
+root.geometry("770x300")
+
+#functions
+def translate_it():
+    pass
 
 #Text boxes & buttons
 original_text= Text(root, height=10, width=40)
