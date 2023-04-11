@@ -12,6 +12,9 @@ root.geometry("770x300")
 #functions
 def translate_it():
     pass
+def clear():
+    original_text.delete(1.0,END)
+    translated_text.delete(1.0,END)
 
 """Text boxes, Combo boxes & buttons"""
 #Text box1
@@ -35,5 +38,9 @@ original_combo.grid(row=1, column=0)
 translated_combo=ttk.Combobox(root, width=50, value=language_list)
 translated_combo.current(21)
 translated_combo.grid(row=1, column=0)
+
+#clear button
+clear_button = Button(root, text="CLEAR", command=clear)
+clear_button.grid(row=2,column=1)
 
 root.mainloop()
