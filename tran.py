@@ -16,6 +16,11 @@ def clear():
     original_text.delete(1.0,END)
     translated_text.delete(1.0,END)
 
+#Grab language list from googletrans
+languages= googletrans.LANGUAGES
+language_list = list(languages.values())
+
+
 """Text boxes, Combo boxes & buttons"""
 #Text box1
 original_text= Text(root, height=10, width=40)
