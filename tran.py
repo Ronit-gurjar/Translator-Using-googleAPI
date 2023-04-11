@@ -68,6 +68,6 @@ translated_combo.grid(row=1, column=2)
 
 #clear button
 clear_button = Button(root, text="CLEAR", command=clear)
-clear_button.grid(row=1,column=2)
+clear_button.grid(row=1,column=1)
 
 root.mainloop()
